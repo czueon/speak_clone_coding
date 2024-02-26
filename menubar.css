@@ -8,7 +8,7 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 20px;
-    background-color: whitesmoke;
+    background-color: white;
     display: block;
     position: fixed;
     line-height: 20px;
@@ -49,6 +49,7 @@ a{
     align-items: center;
     border: 1px solid rgb(211, 217, 253);
     border-radius: 100px;
+    box-shadow: 2px 2px 2px lightgrey;
 }
 
 header nav {
@@ -60,49 +61,53 @@ header nav ul a {
     display: block;
 }
 
-.menu {
-    height: 45px;
-    width: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 header nav > ul {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 6px;
+    justify-content: flex-end;
+    gap: 16px;
 }
 
-header nav ul li.depth1 {
+header nav ul .depth1 {
     height: 60px;
     line-height: 50px;
-    width: 170px;
+    width: 160px;
     display: block;
-    align-items: center;
-    justify-content: center;
     z-index: 5;
     top: 100%;
-    margin-top: 20px;
-    gap: 6px;
     text-align: center;
     border-radius: 100px;
-    background-color: orange;
 }
 
 .depth1-1 {
     height: 60px;
     line-height: 50px;
-    width: 180px;
+    width: 170px;
     display: block;
+    margin: 0 auto;
+    padding-top: 8px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.962);
+}
+
+.m3 {
+    height: 60px;
+    line-height: 50px;
+    width: 170px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 8px;
+    border-radius: 100px;
+    background-color: rgba(255, 255, 255, 0.962);
+}
+
+.menu, #lang {
+    height: 45px;
+    width: 160px;
+    display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 5;
-    gap: 6px;
-    text-align: center;
-    border-radius: 100px;
-    background-color: aqua;
+    margin: 0 auto;
 }
 
 header nav ul.depth2 {
@@ -111,43 +116,74 @@ header nav ul.depth2 {
     height: 0;
     z-index: 5;
     overflow: hidden;
-    transition: all 0.5s ease;
-    padding-left:0;
+    text-align: left;
+    padding-left: 27px;
     margin-left:0;
 }
 
+header nav ul.depth2 hr {
+    height: 1px;
+    width: 120px;
+    margin-right: 100px;
+    background-color: rgb(228, 224, 224);
+    border: 0;
+}
+
 header nav ul.depth2 li {
-    height: 50px;
-    line-height: 50px;
+    height: 40px;
+    line-height: 40px;
     width: 160px;
 }
 
-header nav > ul > li:hover .menu {
+header nav > ul > li .menu:hover {
     border-radius: 100px;
     color: blue;
     background-color: rgba(243, 247, 253, 0.686);
-    transition: all 0.4s ease-out;
+    transition: all 0.5s ease-out;
 }
 
-.depth1.active .depth1-1 {
-    height: 500px;
+.depth1.active .m1 {
+    height: 330px;
     border-radius: 30px;
-    transition: height 0.5s ease-out;
+    transition: height 0.2s ease-out;
+    background-color: white;
+    box-shadow: 0 0 10px whitesmoke;
+}
+
+.depth1.active .m2 {
+    height: 160px;
+    border-radius: 30px;
+    transition: height 0.2s ease-out;
+    background-color: white;
+    box-shadow: 0 0 10px whitesmoke;
+}
+
+.depth1.active .m3 {
+    height: 510px;
+    border-radius: 30px;
+    transition: height 0.2s ease-out;
+    background-color: whitesmoke;
 }
 
 .depth1.active ul {
     height: 500px; /* 클릭시 변경될 높이값 */
+    transition: height 0.3s ease-in-out;
 }
 
-/* header nav ul li.depth1:hover .depth1-1 {
-    height: 500px;
+.depth1.active .menu {
     border-radius: 30px;
-    transition: height 0.5s ease;
-} */
+    background-color: whitesmoke;
+}
 
-/* header nav ul li:hover > .depth2 {
-    height: 500px;
-} */
+.depth1.active #lang {
+    background-color: white;
+}
+
+.depth1.active .svg {
+    transform: rotate(-180deg);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
 
 .logo {
     width: 110px;
@@ -159,15 +195,20 @@ header nav > ul > li:hover .menu {
     border-radius: 100px;
 }
 
+.lang-box {
+    display: flex;
+    align-items: center;
+}
+
 #lang {
     background-color: whitesmoke;
     border: 1px solid lightgrey;
     border-radius: 100px;
 }
 
-header nav > ul > li:hover > #lang {
+header nav > ul > li #lang:hover {
     border-radius: 100px;
-    background-color: rgba(205, 208, 250, 0.686);
+    background-color: rgba(212, 215, 249, 0.686);
     transition: all 0.5s ease;
 }
 
