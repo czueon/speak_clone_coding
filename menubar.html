@@ -16,31 +16,35 @@
             <nav>
                 <ul style="list-style-type: none;">
                     <li class="depth1">
-                        <div class="depth1-1">
+                        <div class="depth1-1 m1">
                             <div class="menu">
                                 <div>스픽: 더 알아보기</div>
                                 <div>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.175 4.825L8 8.64167L11.825 4.825L13 6L8 11L3 6L4.175 4.825Z" fill="currentColor"></path>
                                     </svg>
                                 </div>
                             </div>
                             <ul class="depth2" style="list-style-type: none;">
                                 <li><a href="">브랜드 스토리</a></li>
+                                <hr>
                                 <li><a href="">커리큘럼</a></li>
+                                <hr>
                                 <li><a href="">기술/학습법</a></li>
+                                <hr>
                                 <li><a href="">사용자 후기</a></li>
+                                <hr>
                                 <li><a href="">채용</a></li>
                             </ul>
                         </div>
                     </li>
 
                     <li class="depth1">
-                        <div class="depth1-1">
+                        <div class="depth1-1 m2">
                             <div class="menu">
                                 <div>비즈니스/제휴</div>
                                 <div>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.175 4.825L8 8.64167L11.825 4.825L13 6L8 11L3 6L4.175 4.825Z" fill="currentColor"></path>
                                     </svg>
                                 </div>
@@ -53,25 +57,33 @@
                     </li>
                     
                     <li class="depth1">
-                        <div class="depth1-1">
-                            <div class="menu" id="lang">
-                                <img src="menubar_source/65795fa003162e337b11093e_Frame 1321317243.png" class="language-flag">
-                                <div>한국어</div>
+                        <div class="depth1-1 m3">
+                            <div id="lang">
+                                <img src="menubar_source/kor_flag.png" class="language-flag">
+                                <div>&nbsp한국어&nbsp</div>
                                 <div>
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg class="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.175 4.825L8 8.64167L11.825 4.825L13 6L8 11L3 6L4.175 4.825Z" fill="currentColor"></path>
                                     </svg>
                                 </div>
                             </div>
                             <ul class="depth2" style="list-style-type: none;">
-                                <li><a href="">English</a></li>
-                                <li><a href="">한국어</a></li>
-                                <li><a href="">日本語</a></li>
-                                <li><a href="">Español</a></li>
-                                <li><a href="">中文 – 繁體</a></li>
-                                <li><a href="">Português</a></li>
-                                <li><a href="">Français</a></li>
-                                <li><a href="">Deutsch</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/usa_flag.png" class="language-flag"><a href="">&nbspEnglish</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/kor_flag.png" class="language-flag"><a href="">&nbsp한국어</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/jap_flag.png" class="language-flag"><a href="">&nbsp日本語</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/esp_flag.png" class="language-flag"><a href="">&nbspEspañol</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/chi_flag.png" class="language-flag"><a href="">&nbsp中文 – 繁體</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/por_flag.png" class="language-flag"><a href="">&nbspPortuguês</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/fra_flag.png" class="language-flag"><a href="">&nbspFrançais</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/ger_flag.png" class="language-flag"><a href="">&nbspDeutsch</a></li>
                             </ul>
                         </div>
                     </li>
@@ -88,6 +100,12 @@
         document.addEventListener('DOMContentLoaded', function () {
             var depth1Elements = document.querySelectorAll('.depth1');
             var depth1_1Elements = document.querySelectorAll('.depth1-1');
+            var m1Elements = document.querySelectorAll('.m1');
+            var m2Elements = document.querySelectorAll('.m2');
+            var m3Elements = document.querySelectorAll('.m3');
+            var menuElements = document.querySelectorAll('.menu');
+            var langElements = document.querySelectorAll('#lang');
+            var svgElements = document.querySelectorAll('.svg');
 
             depth1Elements.forEach(function (depth1Element) {
                 depth1Element.addEventListener('click', function () {
@@ -98,6 +116,48 @@
 
             depth1_1Elements.forEach(function (depth1_1Element) {
                 depth1_1Element.addEventListener('click', function () {
+                    // 클릭될 때마다 'active' 클래스를 토글
+                    this.classList.toggle('active');
+                });
+            });
+
+            m1Elements.forEach(function (m1Element) {
+                m1Element.addEventListener('click', function () {
+                    // 클릭될 때마다 'active' 클래스를 토글
+                    this.classList.toggle('active');
+                });
+            });
+
+            m2Elements.forEach(function (m2Element) {
+                m2Element.addEventListener('click', function () {
+                    // 클릭될 때마다 'active' 클래스를 토글
+                    this.classList.toggle('active');
+                });
+            });
+
+            m3Elements.forEach(function (m3Element) {
+                m3.addEventListener('click', function () {
+                    // 클릭될 때마다 'active' 클래스를 토글
+                    this.classList.toggle('active');
+                });
+            });
+
+            menuElements.forEach(function (menuElement) {
+                menuElement.addEventListener('click', function () {
+                    // 클릭될 때마다 'active' 클래스를 토글
+                    this.classList.toggle('active');
+                });
+            });
+
+            langElements.forEach(function (langElement) {
+                langElement.addEventListener('click', function () {
+                    // 클릭될 때마다 'active' 클래스를 토글
+                    this.classList.toggle('active');
+                });
+            });
+            
+            svgElements.forEach(function (svgElement) {
+                svgElement.addEventListener('click', function () {
                     // 클릭될 때마다 'active' 클래스를 토글
                     this.classList.toggle('active');
                 });
