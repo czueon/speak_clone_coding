@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     m3Elements.forEach(function (m3Element) {
-        m3.addEventListener('click', function () {
+        m3Element.addEventListener('click', function () {
             // 클릭될 때마다 'active' 클래스를 토글
             this.classList.toggle('active');
         });
