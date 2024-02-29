@@ -16,8 +16,16 @@ a{
     color: black;
 }
 
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .header-wrap {
-    height: 80px;
     width: 100%;
     padding-top: 20px;
     padding-left: 24px;
@@ -29,6 +37,7 @@ a{
     right: 0%;
     bottom: auto;
     justify-content: center;
+    animation: fadein 3s ease;
 }
 
 .header-wrap header {
@@ -37,7 +46,7 @@ a{
     position: fixed;
     display: flex;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.962);
+    background-color: rgba(255, 255, 255, 0.989);
     font-size: 13px;
     font-weight: 500;
     padding: 6px 16px;
