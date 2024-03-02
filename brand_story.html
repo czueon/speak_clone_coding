@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>브랜드 스토리</title>
+    <link href="menubar.css" rel="stylesheet">
+    <script src="menubar.js"></script>
     <style>
         * {
             margin: 0;
@@ -104,9 +106,119 @@
         .center {
             text-align: center; 
         }
+        .bold {
+            font-weight: 700;
+        }
+        .grid-learning {
+            display : grid;
+            width:90%;
+            grid-column-gap:30px;
+            grid-row-gap:60px;
+            margin-top : 60px;
+            grid-template-columns: 1fr 1fr;
+            justify-content: center;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .learning-block {
+            color: white;
+        }
+        .number-learning {
+            font-size :62px;
+            font-weight: 500;
+        }
     </style>
 </head>
 <body>
+    <!--메뉴바-->
+    <div class="header-wrap">
+        <header>
+            <a href="" class="logo">
+                <img src="menubar_source/speak_logo.svg">
+            </a>
+            <nav>
+                <ul style="list-style-type: none;">
+                    <li class="depth1">
+                        <div class="depth1-1 m1">
+                            <div class="menu">
+                                <div>스픽: 더 알아보기</div>
+                                <div>
+                                    <svg class="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.175 4.825L8 8.64167L11.825 4.825L13 6L8 11L3 6L4.175 4.825Z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="depth2" style="list-style-type: none;">
+                                <li><a href="">브랜드 스토리</a></li>
+                                <hr>
+                                <li><a href="">커리큘럼</a></li>
+                                <hr>
+                                <li><a href="">기술/학습법</a></li>
+                                <hr>
+                                <li><a href="">사용자 후기</a></li>
+                                <hr>
+                                <li><a href="">채용</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="depth1">
+                        <div class="depth1-1 m2">
+                            <div class="menu">
+                                <div>비즈니스/제휴</div>
+                                <div>
+                                    <svg class="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.175 4.825L8 8.64167L11.825 4.825L13 6L8 11L3 6L4.175 4.825Z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="depth2" style="list-style-type: none;">
+                                <li><a href="">B2B 문의</a></li>
+                                <li><a href="">스픽 파트너</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li class="depth1">
+                        <div class="depth1-1 m3">
+                            <div id="lang">
+                                <img src="menubar_source/kor_flag.png" class="language-flag">
+                                <div>&nbsp한국어&nbsp</div>
+                                <div>
+                                    <svg class="svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.175 4.825L8 8.64167L11.825 4.825L13 6L8 11L3 6L4.175 4.825Z" fill="currentColor"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                            <ul class="depth2" style="list-style-type: none;">
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/usa_flag.png" class="language-flag"><a href="">&nbspEnglish</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/kor_flag.png" class="language-flag"><a href="">&nbsp한국어</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/jap_flag.png" class="language-flag"><a href="">&nbsp日本語</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/esp_flag.png" class="language-flag"><a href="">&nbspEspañol</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/chi_flag.png" class="language-flag"><a href="">&nbsp中文 – 繁體</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/por_flag.png" class="language-flag"><a href="">&nbspPortuguês</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/fra_flag.png" class="language-flag"><a href="">&nbspFrançais</a></li>
+                                <hr>
+                                <li class="lang-box"><img src="menubar_source/ger_flag.png" class="language-flag"><a href="">&nbspDeutsch</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <a href="" class="menu" id="free">무료 체험 시작하기 →</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!--브랜드스토리-->
     <div class="section-story">
         <div class="container-a">
             <div class="tech-header">
@@ -148,12 +260,81 @@
                 <div class="center">
                     <p class="title">스픽은 이미 언어 학습의 <br>새로운 패러다임이 되었습니다</p>
                     <p class="content">한국 시장에 진출한 지 1년 만에 100만 다운로드를 넘더니, 2022년 1월에는 앱 스토어 1위에 <br>당당히 이름을 올렸습니다. 한 전문가는 스픽을 두고 이렇게 말했습니다.<br>
-                    &zwj;<br><span class="bold" style="font-weight: bold;">자본력을 바탕으로 한 한국 영어 시장에 새로운 플레이어가 등장했다</span></p>
-                    
+                    &zwj;<br><span class="bold">자본력을 바탕으로 한 한국 영어 시장에 새로운 플레이어가 등장했다</span></p>
+                    <div class="grid-learning">
+                        <div id="w-node" class="learning-block">
+                            <p class="center_mobile">
+                                <span class="bold" style="font-weight: 900;">누적 앱 설치수</span>
+                            </p>
+                            <div class="counter-wrapper">
+                                <div class="number"><span class="number-learning">200</span>
+                                <span>만+</span></div>
+                            </div>
+                        </div>
+                        <div id="w-node" class="learning-block">
+                            <p class="center_mobile">
+                                <span class="bold">누적 투자금액</span>
+                            </p>
+                            <div class="counter-wrapper">
+                                <div class="number"><span class="number-learning">600</span>
+                                <span>억원+</span></div>
+                            </div>
+                        </div>
+                        <div id="w-node" class="learning-block">
+                            <p class="center_mobile">
+                                <span class="bold">작년도 대비 성장률</span>
+                            </p>
+                            <div class="counter-wrapper">
+                                <div class="number"><span class="number-learning">330</span>
+                                <span>%</span></div>
+                            </div>
+                        </div>
+                        <div id="w-node" class="learning-block">
+                            <p class="center_mobile">
+                                <span class="bold">구글/애플 앱스토어</span>
+                            </p>
+                            <div class="counter-wrapper">
+                                <div class="number"><span class="number-learning">1</span>
+                                <span>위</span></div>
+                            </div>
+                            <div>*교육 부문 / 2022년 1월 기준</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-barriers">
+            <div class="big_container" style="background-color:#F3F3F3; width:100%;">
+                <div class="container-a" style="background-color:#F3F3F3;">
+                    <p class="title2">언제, 어디서나, 누구나 <br>장벽 없이 언어를 배울 수 있도록</p>
+                    <p class="content1">AI를 통한 언어 학습은 기술 이상의 의미를 지닙니다. '사람'이라는 요소를 제거함으로써, 스픽은 경제적인 여건,
+                        학습 환경, 실력에 상관없이 모두가 합리적인 가격에 퀄리티 높은 수업을 받을 수 있도록 합니다.
+                    </p>
+                    <div class="wrapper center">
+                        <img src="https://assets-global.website-files.com/61a88c135006e8345b005efd/63294bcf2767481da722fa15_connor_brandstory.png" loading="lazy" width="30" height="26" alt class="image-quote">
+                        <div style="padding-top:30px"></div>
+                        <p style="width:85%; margin-left:auto; margin-right:auto;">
+                        <span class="bold">
+                            언어 학습 방식은 10년 안에 지금과는 완전히 달라질 겁니다.<br>사람들은 원어민과 교류하지 않더라도 핸드폰과 대화하며 언어를 배우게 될 것입니다.
+                        </span>
+                        </p>
+                        <p style="margin-top:10px;">- 스픽 CEO&nbsp;코너 즈윅 -</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-timeline" style="margin-top:275px;">
+                <div class="container-a" style="display:flex; align-items:start; justify-content: space-between;">
+                    <div class="flex-timemeline" style="width:445px; padding-right:35px;">
+                        <p class="title1">스픽의 이야기는 <br>지금부터 시작입니다</p>
+                        <p class="content1">사람들은 이미 포화 상태인 영어 교육 시장에 뛰어든 우리를 '무모하다'고 했습니다. 하지만, 우리는 우리의 기술이 언어 학습 방식을 완전히 바꿀 수 있다고 믿었습니다.<br>&zwj;<br>
+                        스픽의 가치와 비전에 공감하는 분들이 늘어가면서, 그 믿음은 현실이 되어가고 있습니다.</p>
+                    </div>
+                    <div class="right-timeline">
+                        <img src="https://assets-global.website-files.com/61a88c135006e8345b005efd/6399e320809a0cebf235fcff_Group%2039897.svg" loading="lazy" alt class="image-timeline" data-ix="fade-in-when-scrolled" style="opacity:1; transition:opacity 1000ms ease 0s;">
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </body>
 </html>
